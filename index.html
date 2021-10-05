@@ -38,13 +38,19 @@
 
 				<!-- Menu -->
 					<section id="menu">
-
-						<!-- Search -->
+						<!-- Actions -->
 							<section>
-								<form class="search" method="get" action="#">
-									<input type="text" name="query" placeholder="Search暂无法使用" />
-								</form>
+								<ul class="actions stacked">
+									<li><a href="#" class="button large fit" id="abc">登 录（测试中）</a></li>
+									<script type="text/javascript">
+										document.getElementById('abc').onclick = function(){
+										let name = prompt('请输入你的名称：');
+										alert('Hello ' + name + ', nice to see you!');
+										}
+									</script>
+								</ul>
 							</section>
+
 
 						<!-- Links -->
 							<section>
@@ -76,12 +82,6 @@
 								</ul>
 							</section>
 
-						<!-- Actions -->
-							<section>
-								<ul class="actions stacked">
-									<li><a href="#" class="button large fit">Log In（暂无）</a></li>
-								</ul>
-							</section>
 
 					</section>
 
