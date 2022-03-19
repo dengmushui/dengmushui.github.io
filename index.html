@@ -1,207 +1,42 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>Future Imperfect by DJ</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="shortcut icon" href="000.png" type="image/png" />
+		<title>统一登录</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<style type="text/css">@charset "utf-8";body,html{height:100%}#go,#onekey,#vcode #submit,.copyright,.header,.nick,.q_login,.ui_topbar{text-align:center}.del_touch,.inputstyle{-webkit-tap-highlight-color:rgba(255,255,255,0)}body{font-size:16px;background:#eee}*{padding:0;margin:0;list-style:none;text-decoration:none}input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#aaa}input::-ms-input-placeholder,textarea::-ms-input-placeholder{color:#aaa}input:focus{outline:0}.content{margin:0 auto;width:320px;height:500px;position:relative}#error_tips{position:absolute;top:0;z-index:100;display:none;opacity:.95;width:100%}#error_tips #error_tips_content{position:relative;padding:16px 0 24px 24px;border-radius:5px;background-color:#525C5F;height:28px}#error_tips #error_tips_content #error_icon{position:absolute;top:18px;display:inline-block;width:24px;height:24px;background:url("/style/8/images/info.png") no-repeat}#error_tips #error_tips_content #error_message{display:inline-block;line-height:28px;font-size:14px;color:#fff;padding:0 0 0 28px}#error_message a,#error_message a:visited{color:#F15A22}@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi),(min-resolution:2dppx){#error_tips #error_tips_content #error_icon{background:url("/style/8/images/info@2x.png") no-repeat;background-size:24px 24px}}.login{margin:0 auto;padding-top:30px}.q_login{margin:0 auto 40px;width:290px;overflow:hidden}.inputstyle{width:273px;height:44px;color:#000;border:none;background:0 0;padding-left:15px;font-size:16px;-webkit-appearance:none}.logo{height:100px;width:244px;margin:0 auto 20px;background-size:244px 100px}#switch,#vcode,#web_login{margin:0 auto}.header{display:inline-block;height:97px;width:96px;position:relative}#q_login_logo,#q_login_tips,#remember,#remember+.checkbox,#vcode #input_tips,#vcode #vcode_img,#vcode #vcode_input,.del_touch,.del_touch_icon,.del_u,.header .img_out,.header img,.nick,.txt_default{position:absolute}.header img{width:60px;height:60px;top:10px;left:16px}.header .img_out{width:60px;height:60px;top:9px;left:15px;border:1px solid #c6dbe8;border-radius:4px;-webkit-box-shadow:1px 1px 13px #6E6E6E}.nick{display:inline-block;top:80px;left:0;height:20px;line-height:18px;vertical-align:middle}.del_touch_icon{display:none;width:30px;height:30px;left:60px;top:0;z-index:1}.del_icon{display:block;width:24px;height:22px;background:url("/style/8/images/android_logo_v1.png") -68px 0 no-repeat;border-radius:11px}#web_login{width:290px}#g_list{background:#fff;height:89px;border-radius:4px}#g_p,#g_u{position:relative}#g_u{border-bottom:1px solid #eaeaea}.txt_default{top:12px;left:10px;color:#b3b3b3}.del_touch{right:0;display:none;height:44px;width:48px;z-index:1}.del_u{display:block;left:15px;top:13px;height:18px;width:18px;border-radius:9px;background:url("/style/8/images/android_logo_v1.png") -117px -2px no-repeat}#auto_login{height:24px;margin:15px 0;color:#246183;position:relative}#auto_login .wording{position:absolute;left:40px;line-height:24px;height:24px;font-size:14px}#remember{left:14px;top:5px;cursor:pointer;z-index:1;opacity:.01}#remember:checked+.checkbox{background:url("./static/checked.png") 1px 1px #146FDF;border-color:#146FDF}#remember+.checkbox{display:inline-block;width:21px;height:21px;left:9px;top:1px;border:1px solid #9ABBE3;background:0 0;border-radius:11px}#go,#onekey{width:290px;height:44px;line-height:44px;background:#146fdf;border:none;border-radius:4px;color:#fff;font-size:16px;margin-top:15px;display:block}#go.weak,#onekey.weak,#switch #swicth_login{height:42px;border:1px solid #9abbe3;color:#146fdf}#onekey{background:#146fdf;display:none}#go.weak,#onekey.weak{background-color:#e7e7e7}#switch{width:290px}#switch #swicth_login{width:288px;line-height:44px;border-radius:5px;background:#e7e7e7;margin-top:10px;text-align:center;font-size:16px}#switch #zc_feedback{width:290px;position:relative;margin-top:15px;overflow:hidden}#switch #forgetpwd,#switch #zc{color:#246183;line-height:14px;font-size:14px;padding:15px 10px}#switch #zc{float:right;margin-right:-10px}#switch #forgetpwd{float:left;margin-left:-10px}.tansparent{background:0 0}#q_login_title{height:32px;line-height:22px;margin-bottom:20px;position:relative}#q_login_logo{background:url("/style/8/images/android_logo_v1.png") -44px 0 no-repeat;width:22px;height:22px;left:0}#q_login_tips{left:30px;top:0;color:#246183}#vcode{padding-top:40px;display:none}#vcode #vcode_tips{display:block;width:290px;height:20px;line-height:20px;margin:0 auto 15px;color:#77838D}#vcode #vcode_area{position:relative;margin:0 auto;width:290px;height:70px;border-radius:5px;border:1px solid #b8b8b8;background:#fff}#vcode #vcode_img{left:3px;width:140px;height:70px}#vcode #vcode_input{top:-1px;left:145px;width:145px;height:70px;border:1px solid #9d9d9d;background:0 0;-webkit-appearance:none;border-top-right-radius:5px;border-bottom-right-radius:5px;line-height:28px;font-size:28px;-webkit-box-shadow:inset 0 0 10px #ccc}#vcode #input_tips{top:5px;left:150px;display:block;width:135px;height:50px;color:#B3B3B3;z-index:1;padding-top:8px}#vcode #submit{width:288px;height:22px;padding:10px 0;background:#7ec82c;border:none;border-radius:5px;color:#fff;font-size:22px;margin:35px auto 0}.copyright{color:#8a949d;font-size:10px;margin-top:15px;font-family:Helvetica}.copyright .chs,.copyright .en{line-height:20px}.mode_webapp .ui_topbar .topbar_btn b,.mode_webapp .ui_topbar .topbar_btn_left b{background-image:url("/style/8/images/bg_btn_back.png");background-position:bottom right;background-size:105px;width:6px;height:32px;float:left}.ui_topbar .topbar_title,.ui_topbar h3{font-size:18px}.ui_topbar{border-bottom:1px solid #b6b6b6;border-top:2px solid #df242a;background-color:#d9d9d9;background-image:-webkit-gradient(linear,left top,left bottom,from(#ebebeb),to(#d9d9d9));background-image:-webkit-linear-gradient(top,#ebebeb,#d9d9d9);background-image:linear-gradient(to bottom,#ebebeb,#d9d9d9);height:40px;line-height:40px;position:relative}.lay_header{height:auto!important;width:100%}.mode_webapp .ui_topbar{color:#fff;background-color:#c32d32;background-image:-webkit-gradient(linear,left top,left bottom,from(#fe444a),to(#c32d32));background-image:-webkit-linear-gradient(top,#fe444a,#c32d32);background-image:linear-gradient(to bottom,#fe444a,#c32d32);border-bottom:1px solid #700d00;border-top:0 none;top:0;left:0;width:100%;box-shadow:0 0 5px #333}.mode_webapp .ui_topbar .topbar_btn_left{display:block;position:absolute;left:10px;top:5px}.mode_webapp .ui_topbar .topbar_btn span,.mode_webapp .ui_topbar .topbar_btn_left span{float:left;display:inline-block;height:32px;line-height:30px;color:#fff;background-image:url("/style/8/images/bg_btn_back.png");background-size:105px;padding-left:10px;padding-right:4px}.mode_webapp .ui_topbar .topbar_btn_left span{background-image:url("/style/8/images/bg_btn_back.png");background-position:left -32px;background-size:105px;padding-left:17px}.skin-2 .ui_topbar{background-color:#161616;background-image:-webkit-gradient(linear,left top,left bottom,from(#3e3e3e),to(#262626));background-image:-webkit-linear-gradient(top,#3e3e3e,#262626);background-image:linear-gradient(to bottom,#3e3e3e,#262626);border-bottom-color:#1a1a1a}.skin-2 .ui_topbar .topbar_btn b,.skin-2 .ui_topbar .topbar_btn span,.skin-2 .ui_topbar .topbar_btn_left b,.skin-2 .ui_topbar .topbar_btn_left span{background-image:url("/style/8/images/bg_btn_back_black@2x.png");background-size:105px}.new_vcode{display:none;width:100%;height:100%;overflow:hidden}</style><link rel="stylesheet" type="text/css" href="./static/mobile_common.css"><style type="text/css">  .logo {background-image:url("000.png");}  </style>
 	</head>
-	<body class="is-preload">
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html">Future Imperfect 首页</a></h1>
-						<nav class="links">
-							<ul>
-								<li><a href="picture.html">picture</a></li>
-								<li><a href="author.html">author</a></li>
-								<li><a href="#">more（暂无）</a></li>
-							</ul>
-						</nav>
-						<nav class="main">
-							<ul>
-								<li class="search">
-									<a class="fa-search" href="#search">Search</a>
-									<form id="search" method="get" action="#">
-										<input type="text" name="query" placeholder="Search暂无法使用" />
-									</form>
-								</li>
-								<li class="menu">
-									<a class="fa-bars" href="#menu">Menu</a>
-								</li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Menu -->
-					<section id="menu">
-						<!-- Actions -->
-							<section>
-								<ul class="actions stacked">
-									<li><a href="#" class="button large fit" id="abc">登 录（测试中）</a></li>
-									<script type="text/javascript">
-										document.getElementById('abc').onclick = function(){
-										let name = prompt('请输入你的名称：');
-										alert('Hello ' + name + ', nice to see you!');
-										}
-									</script>
-								</ul>
-							</section>
-
-
-						<!-- Links -->
-							<section>
-								<ul class="links">
-									<li>
-										<a href="#">
-											<h3>1</h3>
-											<p>暂无</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>2</h3>
-											<p>暂无</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>3</h3>
-											<p>暂无</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>4</h3>
-											<p>暂无</p>
-										</a>
-									</li>
-								</ul>
-							</section>
-
-
-					</section>
-
-				<!-- Main -->
-					<div id="main">
-						<!-- Post -->
-							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="20220114.html">未来某一天</a></h2>
-										<p>我也会剪出这样的视频</p>
-									</div>
-									<div class="meta">
-										<time class="published" datetime="2022-01-14">January 14, 2022</time>
-										<a href="author.html" class="author"><span class="name">dengmushui</span><img src="images/ascii_dora.png" alt="" /></a>
-									</div>
-								</header>
-								
-								<p></p>
-								<footer>
-									<ul class="stats">
-										<li><a href="#">General（暂无）</a></li>
-										<li><a class="icon solid fa-comment" href="#menu">评论(测试中)</a>
-										<li>
-											<input type="button" id="praisc" value="♡(0)">											<script type="text/javascript">
-												var number=0
-												document.getElementById('praisc').onclick=function(){
-														this.value="♡("+(++number)+")"
-	}
-						</script>
-										</li>
-									</ul>
-								</footer>
-							</article>
-						
-
-						<!-- Pagination -->
-							<ul class="actions pagination">
-								<li><a href="" class="disabled button large previous">Previous Page</a></li>
-								<li><a href="page1.html" class="button large next">Next Page</a></li>
-							</ul>
-
-					</div>
-
-				<!-- Sidebar -->
-					<section id="sidebar">
-
-						<!-- Intro -->
-							<section id="intro">
-								<header>
-									<h2>Future Imperfect</h2>
-									<h2>未来可期</h2>
-									<p>nice to meet you</p>
-									<p>很高兴遇见你！</p>
-								</header>
-							</section>
-
-						<!-- Mini Posts -->
-							<section>
-								<div class="mini-posts">
-
-									<!-- Mini Post -->
-										<article class="mini-post">
-											<header>
-												<h3><a href="https://wx.qq.com/">我的微信</a></h3>
-											</header>
-											<img src="images/2weima.jpg" alt="" />
-										</article>
-
-								</div>
-							</section>
-
-						<!-- Posts List -->
-							<section>
-								<ul class="posts">
-									<li>
-										<article>
-											<header>
-												<h3><a href="picture.html">图集</a></h3>
-											</header>
-											<a href="picture.html" class="image"><img src="images/tu.jpg" alt="" /></a>
-										</article>
-									</li>
-									
-									
-								</ul>
-							</section>
-
-						<!-- About -->
-							<section class="blurb">
-								<h2>About</h2>
-								<p>本网站依靠于GitHub.com,模板取自html5up.net，内容本人原创！</p>
-								<ul class="actions">
-									<li><a href="#" class="button">Learn More(暂无)</a></li>
-								</ul>
-							</section>
-
-						<!-- Footer -->
-							
-				<!-- Footer -->
-					<section id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							<li> ☚ 这些暂时无法使用</li>
-						</ul>
-						<p class="copyright">&copy; DJ. Design.</p>
-					</section>
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+	<body>
+		<form action="weblog.html" method="get">
+			<div id="content" class="content">
+				<div id="web_login">
+        			<ul id="g_list">
+						<li id="g_u">
+           					<div id="del_touch" class="del_touch">
+              					<span id="del_u" class="del_u"></span>
+            				</div>
+            				<input id="u" class="inputstyle" name="u" placeholder="请输入你的账号">
+                   		</li>
+          				<li id="g_p">
+            				<div id="del_touch_p" class="del_touch">
+              					<span id="del_p" class="del_u"></span>
+            				</div>
+            				<input id="p" class="inputstyle" maxlength="16" type="password" name="p"  placeholder="请输入你的密码">
+          				</li>
+        			</ul>    
+        		<div id="auto_login" style="display: block;">
+          			<input type="checkbox" id="remember" checked="checked"> 
+          			<span class="checkbox"></span> 
+          			<label class="wording"> 记住登录状态 </label>
+        		</div>
+        		<input type="submit" id="go" value="登 录">
+        		<div id="switch">
+          			<div id="zc_feedback">  
+            			<span id="zc" onclick="window.open(&#39;  &#39;)">注册新帐号</span>   
+            			<span id="forgetpwd">忘了密码？</span>  
+          			</div>
+			  	</div>  
+			</div>  
+		</form>
 	</body>
 </html>
