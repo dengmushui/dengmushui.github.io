@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>事件</title>
+	<style>
+		body{
+			margin:0;
+
+		}
+		.header {
+  			background-color: #f1f1f1;
+
+  			text-align: center;
+		}
+        #img {
+            position: absolute;
+        }
+	.column {
+	  float: left;
+
+	}
+	.column.side {
+	  width: 25%;
+
+	  
+	}
+	.column.middle {
+	  width: 75%;
+
+	}
+		ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #333;
+		}
+		
+		li {
+		  float: left;
+		}
+		
+		li a, .dropbtn {
+		  display: inline-block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+		
+		li a:hover, .dropdown:hover .dropbtn {
+		  background-color: red;
+		}
+		
+		li.dropdown {
+		  display: inline-block;
+		}
+		
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #f9f9f9;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
+		}
+		
+		.dropdown-content a {
+		  color: black;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
+		  text-align: left;
+		}
+		
+		.dropdown-content a:hover {background-color: #f1f1f1;}
+		
+		.dropdown:hover .dropdown-content {
+		  display: block;
+		}
+	</style>
+</head>
+<body>
+<div class="header">
+  <h1>游泳阻力器演示模型</h1>
+</div>
+<ul>
+  <li><a href="#home">参数显示1</a></li>
+  <li><a href="#news">参数显示2</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">阻力设置</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+</ul>
+
+  <div class="column side">
+    <h2>数据显示</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+  </div>
+  
+  <div class="column middle">
+    <h2>数据显示</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+    </div>
+
+
+	<canvas id="cvs"  width="1300" height="600" style="border:1px solid #ccc;margin:20px auto;display: block;">
+        当前浏览器不支持canvas
+	</canvas>
+	<script>
+
+        var cvs = document.getElementById("cvs");
+
+        var imgObj1 = new Image();
+        imgObj1.src = "1.png";
+
+        imgObj1.onload = function(){
+                var ctx = cvs.getContext('2d');
+                ctx.drawImage(this, 0,0);
+            }
+        var imgObj2 = new Image();
+        imgObj2.src = "2.png";
+
+        imgObj2.onload = function(){
+                var ctx = cvs.getContext('2d');
+                ctx.drawImage(this, 0,0);
+            }
+	</script>
+</body>
+</html>
