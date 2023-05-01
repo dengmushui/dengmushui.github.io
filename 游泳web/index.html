@@ -14,8 +14,10 @@
 
   			text-align: center;
 		}
-        #img {
+        img {
             position: absolute;
+						left:335px;
+  						top:650px;
         }
 	.column {
 	  float: left;
@@ -101,7 +103,7 @@
 
   <div class="column side">
     <h2>数据显示</h2>
-    <p>点击开始游泳后，点击方向键使人物移动</p>
+    <p>下面按键在测试中，暂时无效</p>
 	<p>
 <input type="button" id="start" value="开始游泳">
 <input type="button" id="go" value="往前">
@@ -114,27 +116,26 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
     </div>
 
-	<canvas id="cvs"  width="1300" height="600" style="border:1px solid #ccc;margin:20px auto;display: block;">
+	<canvas id="cvs"  width="1400" height="600" style="border:1px solid #ccc;margin:20px auto;display: block;">
         当前浏览器不支持canvas
 	</canvas>
+
+	<img src="3.gif",id="gif">		
+
 	<script>
-		var x=200
+		var x=250
         var go = document.getElementById("go");
         var start = document.getElementById("start");
         var back = document.getElementById("back");
         var cvs = document.getElementById("cvs");
         var ctx = cvs.getContext('2d');
+		var gif = document.getElementById("gif");
         var imgObj1 = new Image();
         imgObj1.src = "1.png";
         imgObj1.onload = function(){
                 ctx.drawImage(this, 0,0);
             }
 
-        var imgObj2 = new Image();
-        imgObj2.src = "2.png";
-        imgObj2.onload = function(){
-                ctx.drawImage(this, x,400);
-            }
             function drawLine(context, x0, y0, x1, y1) {
                 context.beginPath()
                 context.strokeStyle = 'black'
@@ -143,27 +144,23 @@
                 context.lineTo(x1, y1)
                 context.stroke()
             }
-			drawLine(ctx,242,372,456,470)
+		drawLine(ctx,242,372,456,470)
+
+		start.onmousedown=function(e){
+			gif.setAttribute("src","3.gif")
+		}
+
 
 		go.onmousedown=function(e){
+					
            ctx.clearRect(242,0,1100,600);
 		   x=x+10;
-        	var imgObj2 = new Image();
-        	imgObj2.src = "2.png";
-           imgObj2.onload = function(){
-                ctx.drawImage(this, x,400);
-            };
-			drawLine(ctx,242,372,256+x,470);
+		   drawLine(ctx,242,372,256+x,470);
 		}
 		back.onmousedown=function(e){
            ctx.clearRect(242,0,1100,600);
 		   x=x-10;
-        	var imgObj2 = new Image();
-        	imgObj2.src = "2.png";
-           imgObj2.onload = function(){
-                ctx.drawImage(this, x,400);
-            };
-			drawLine(ctx,242,372,256+x,470);
+		   drawLine(ctx,242,372,256+x,470);
 		}
             
 	</script>
