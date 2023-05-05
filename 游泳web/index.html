@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 	<meta charset="UTF-8">
-	<title>事件</title>
+	<title>Valodor游泳阻力器演示模型</title>
 	<style>
 		body{
 			margin:0;
@@ -81,60 +81,48 @@
 </head>
 <body>
 <div class="header">
-  <h1>游泳阻力器演示模型</h1>
+  <h1>Valodor游泳阻力器演示模型</h1>
 </div>
 <ul>
-  <li><a href="#home">参数显示1</a></li>
-  <li><a href="#news">参数显示2</a></li>
+  <li><a id="start">原地阻力游泳</li>
+  <li><a id="go">前进阻力游泳</li>
+  <li><a id="back">前进动力游泳</li>
   <li class="dropdown">
-    <a class="dropbtn">阻力设置</a>
+    <a class="dropbtn">概念图</a>
     <div class="dropdown-content">
-      <a >Link 1</a>
-      <a >Link 2</a>
-      <a >Link 3</a>
+      <a id="first">使用概念图</a>
+      <a id="second">手环概念图</a>
+      <a id="third">阻力器概念图</a>
     </div>
   </li>
 </ul>
-
-  <div class="column side">
-    <h2>数据显示</h2>
-    <p>点击下面按键测试</p>
-	<p>
-<input type="button" id="start" value="阻力模式">
-<input type="button" id="go" value="测速模式">
-<input type="button" id="back" value="动力模式">
-</p>
-  </div>
-  
-  <div class="column middle">
-    <h2>数据显示</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-    </div>
-
-
-
-	<img src="2.png" id="light"  >		
+	<img src="1.png" id="light"  >		
 			
 	<script>
         var go = document.getElementById("go");
         var start = document.getElementById("start");
         var back = document.getElementById("back");
-
-    var light=document.getElementById("light");
-
-    
+        var first = document.getElementById("first");
+        var second = document.getElementById("second");
+        var third = document.getElementById("third");
+    	var light=document.getElementById("light");
 		start.onmousedown=function(e){
-
 		light.src="自由泳动图.gif"
-            
 		}
-
-
 		go.onmousedown=function(e){
 		light.src="前进图.gif"
 		}
 		back.onmousedown=function(e){
 		light.src="回收图.gif"
+		}
+		first.onmousedown=function(e){
+		light.src="1.png"
+		}
+		second.onmousedown=function(e){
+		light.src="2.png"
+		}
+		third.onmousedown=function(e){
+		light.src="3.jpg"
 		}
             
 	</script>
