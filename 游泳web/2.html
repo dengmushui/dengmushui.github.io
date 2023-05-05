@@ -98,11 +98,11 @@
 
   <div class="column side">
     <h2>数据显示</h2>
-    <p>点击下面按键测试</p>
+    <p>下面按键在测试中，暂时无效</p>
 	<p>
-<input type="button" id="start" value="阻力模式">
-<input type="button" id="go" value="测速模式">
-<input type="button" id="back" value="动力模式">
+<input type="button" id="start" value="开始游泳">
+<input type="button" id="go" value="往前">
+<input type="button" id="back" value="往后">
 </p>
   </div>
   
@@ -110,33 +110,48 @@
     <h2>数据显示</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
     </div>
+    <img id="light" src="前进图.gif">
 
-
-
-	<img src="2.png" id="light"  >		
-			
-	<script>
+<script>
         var go = document.getElementById("go");
         var start = document.getElementById("start");
         var back = document.getElementById("back");
 
+    // 1.获取图片对象
     var light=document.getElementById("light");
 
-    
+    var flag=false;//代表为图1状态
+    //2.绑定单击事件
+    light.onclick=function(){//定义匿名方法
+        if(flag){
+            //判断如果是图2，则换图1;
+            light.src="前进图.gif";
+            flag=false;
+        }else{
+            //反之
+            light.src="回收图.gif";
+            flag=true;
+        }
 		start.onmousedown=function(e){
-
-		light.src="自由泳动图.gif"
+		e=e||windows.event;
+		light.src="前进图.gif"
             
 		}
 
 
 		go.onmousedown=function(e){
-		light.src="前进图.gif"
+					
+           ctx.clearRect(242,0,1100,600);
+		   x=x+10;
+		   drawLine(ctx,242,372,256+x,470);
 		}
 		back.onmousedown=function(e){
-		light.src="回收图.gif"
+           ctx.clearRect(242,0,1100,600);
+		   x=x-10;
+		   drawLine(ctx,242,372,256+x,470);
 		}
-            
-	</script>
+        
+    }
+</script>
 </body>
 </html>
