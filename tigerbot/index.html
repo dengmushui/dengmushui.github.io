@@ -101,20 +101,23 @@
 			
 	<script>
         var go = document.getElementById("go");
-		var question = document.getElementById("txt").value;
 		var httpRequest = new XMLHttpRequest();
 		var url ="https://api.tigerbot.com/bot-service/ai_service/gpt";
-		var obj = { text: question, modelVersion: 'tigerbot-7b-sft' }
 		go.onmousedown=function(e){
+			var question = document.getElementById("txt").value;
+     		var obj = { "text": question, "modelVersion": 'tigerbot-7b-sft' }
 			window.alert(question);
 			httpRequest.open('POST', url, true);
 			httpRequest.setRequestHeader("Authorization","Bearer 5ee46ccac35ea1ffe74db1b079c4b51fb506326ea505450a1e81f126581476d9");
+			httpRequest.setRequestHeader("Content-type","application/json");			
 			httpRequest.send(JSON.stringify(obj));
 			httpRequest.onreadystatechange = function () {//请求后的回调接口，可将请求成功后要执行的程序写在其中
     			if (httpRequest.readyState == 4 && httpRequest.status == 200) {//验证请求是否发送成功
-        			var json = httpRequest.responseText;//获取到服务端返回的数据
+        			var json = JSON.parse(httpRequest.responseText);
+					console.log(httpRequest.responseText);
 					window.alert(json);
     				}
+
 			};
 		}
 
