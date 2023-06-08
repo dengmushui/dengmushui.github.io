@@ -84,9 +84,9 @@
   <h1>Valodor游泳阻力器演示模型</h1>
 </div>
 <ul>
-  <li><a id="start">原地阻力游泳</li>
-  <li><a id="go">前进阻力游泳</li>
-  <li><a id="back">前进动力游泳</li>
+  <li><a id="start">原地阻力游泳</a></li>
+  <li><a >前进阻力游泳</a></li>
+  <li><a id="back">前进动力游泳</a></li>
   <li class="dropdown">
     <a class="dropbtn">概念图</a>
     <div class="dropdown-content">
@@ -96,35 +96,28 @@
     </div>
   </li>
 </ul>
-	<img src="1.png" id="light"  >		
+	<input type="text" id="txt" value="请输入内容">
+	<input type="button" id="go" value="点击提交">
 			
 	<script>
         var go = document.getElementById("go");
-        var start = document.getElementById("start");
-        var back = document.getElementById("back");
-        var first = document.getElementById("first");
-        var second = document.getElementById("second");
-        var third = document.getElementById("third");
-    	var light=document.getElementById("light");
-		start.onmousedown=function(e){
-			window.alert("123");
-		light.src="自由泳动图.gif"
-		}
+		var question = document.getElementById("txt").value;
+		var httpRequest = new XMLHttpRequest();
+		var url ="https://api.tigerbot.com/bot-service/ai_service/gpt";
+		var obj = { text: question, modelVersion: 'tigerbot-7b-sft' }
 		go.onmousedown=function(e){
-		light.src="前进图.gif"
+			window.alert(question);
+			httpRequest.open('POST', url, true);
+			httpRequest.setRequestHeader("Authorization","Bearer 5ee46ccac35ea1ffe74db1b079c4b51fb506326ea505450a1e81f126581476d9");
+			httpRequest.send(JSON.stringify(obj));
+			httpRequest.onreadystatechange = function () {//请求后的回调接口，可将请求成功后要执行的程序写在其中
+    			if (httpRequest.readyState == 4 && httpRequest.status == 200) {//验证请求是否发送成功
+        			var json = httpRequest.responseText;//获取到服务端返回的数据
+					window.alert(json);
+    				}
+			};
 		}
-		back.onmousedown=function(e){
-		light.src="回收图.gif"
-		}
-		first.onmousedown=function(e){
-		light.src="1.png"
-		}
-		second.onmousedown=function(e){
-		light.src="2.png"
-		}
-		third.onmousedown=function(e){
-		light.src="3.jpg"
-		}
+
             
 	</script>
 </body>
